@@ -1,0 +1,23 @@
+{
+  "name": "markdown_editor",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "RyanChill"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/RyanChill94/angular-markdown-editor",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.1",
+    "angular-sanitize": "~1.4.1",
+    "marked": "~0.3.3",
+    "highlightjs": "~9.6.0"
+  }
+}

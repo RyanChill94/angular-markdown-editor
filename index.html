@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>markdown</title>
+    <link rel="shortcut icon" href="FE/assets/images/header.jpg">
+    <link rel="stylesheet" type="text/css" href="bower_components/highlightjs/styles/atelier-cave.light.css">
+    <link rel="stylesheet" type="text/css" href="FE/dist/assets/styles/customer.css">
+</head>
+<body ng-controller="MarkdownController">
+  
+  <nav class="navbar bg-black">
+    <div class="container">
+      <div class="title">
+        <a href="#" class="main-title col-white">LiveMarkdown</a>
+        <a href="#" class="btn btn-clean title-right " ng-click="clean()">Clean</a>
+        <a href="#" class="btn btn-html title-right " onclick="toText()">toMD</a>
+        <a href="#" class="btn btn-markdown title-right" onclick="toHTML()">toHTML</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container fill main">
+    <div class="left fill padding-right">
+      
+      <textarea class="inputText fill col-black" id="inputText" ng-model="inputText" onkeydown="updateViewHeight()" tab placeholder="markdown">
+      </textarea>
+    </div>
+    <div class="right fill padding-left">
+      <div class="outputText fill" id="outputText" ng-bind-html="outputText"></div>
+    </div>
+  </div>
+
+  <div class="syntax-hint">
+    
+  </div>
+
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="bower_components/marked/lib/marked.js"></script>
+<script type="text/javascript" src="bower_components/highlightjs/highlight.pack.js"></script>
+<script type="text/javascript" src="FE/dist/api/all.min.js"></script>
+<script type="text/javascript" src="FE/dist/assets/js/customer.min.js"></script>
+<script type="text/javascript">
+  console.log('/*-------markdown editor-------*/');
+</script>
+</body>
+</html>
